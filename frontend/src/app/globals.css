@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-creamy: #FAF8F5;
+    --card-bg: #FFFFFF;
+    --card-border: #EAE6DF;
+    --text-primary: #18191B;
+    --text-secondary: #6B7280;
+    --text-muted: #9CA3AF;
+    --accent: #E86A33;
+    --accent-hover: #D45823;
+    --accent-soft: #FFF4EE;
+    --badge-bg: #F3EFEA;
+    --dark-pill: #1E2024;
+  }
+
+  body {
+    background-color: var(--bg-creamy);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #D9D4CB;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B8B0A2;
+}
+
+/* Audio wave pulse animation */
+@keyframes audioPulse {
+  0%, 100% { height: 6px; }
+  50% { height: 18px; }
+}
+
+.audio-bar-1 { animation: audioPulse 1.2s ease-in-out infinite; }
+.audio-bar-2 { animation: audioPulse 1.4s ease-in-out 0.2s infinite; }
+.audio-bar-3 { animation: audioPulse 0.9s ease-in-out 0.4s infinite; }
+.audio-bar-4 { animation: audioPulse 1.1s ease-in-out 0.1s infinite; }
